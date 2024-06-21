@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=poneglyphs
+Exec=/opt/poneglyphs/poneglyphs
+Icon=poneglyphs
+Terminal=false
+Type=Application
+Categories=Other
+

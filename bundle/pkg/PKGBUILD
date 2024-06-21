@@ -1,0 +1,17 @@
+pkgname=poneglyphs
+pkgver=1.0
+pkgrel=1
+pkgdesc="sqlcipher qt app"
+arch=('any')
+
+depends=("qt6-base" "qt6-declarative" "sqlcipher")
+package() {
+  install -d "$pkgdir/opt/poneglyphs"
+  install -d "$pkgdir/usr/share/applications/"
+  install -d "$pkgdir/usr/share/icons/hicolor/32x32/apps/"
+  install -d "$pkgdir/usr/share/icons/hicolor/128x128/apps/"
+  cp -rf "/repo/qt/qtProject/poneglyphs/bundle/pkg/opt/" "$pkgdir"
+  install -m644 "/repo/qt/qtProject/poneglyphs/bundle/pkg/poneglyphs.desktop" "$pkgdir/usr/share/applications/"
+  install -m644 "/repo/qt/qtProject/poneglyphs/bundle/pkg/32poneglyphs.png" "$pkgdir/usr/share/icons/hicolor/32x32/apps/poneglyphs.png"
+  install -m644 "/repo/qt/qtProject/poneglyphs/bundle/pkg/128poneglyphs.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/poneglyphs.png"
+}
